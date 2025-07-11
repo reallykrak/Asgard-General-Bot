@@ -1,0 +1,16 @@
+{
+  "token": "",
+  "log": "1380175249848664064",
+  "sahip": "999406459106373722",
+  "desteksunucusu": "https://discord.gg/6utvxgKTyn",
+  "bot-davet": "https://discord.com/oauth2/authorize?client_id=1366082380862980389&permissions=8&integration_type=0&scope=bot",
+  "bot-adi": "Deneme",
+  "clientId": "1366082380862980389",
+  "mesajXp": 1,
+  "sesXp": 2,
+  "levelXp": 99,
+  "embedColor": "#5865F2",
+  "errorColor": "#ED4245",
+  "successColor": "#57F287",
+  "footer": "Nuron's Krak|reallykrak"
+}
