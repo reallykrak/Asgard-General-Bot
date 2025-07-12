@@ -122,7 +122,7 @@ module.exports = {
 
                 const searchInput = new TextInputBuilder()
                     .setCustomId("search-input")
-                    .setLabel("Aramak istediğiniz komut adı veya anahtar kelime")
+                    .setLabel("Aramak İstediğiniz Komut Adı")
                     .setPlaceholder("Örn: ban, kick, avatar...")
                     .setRequired(true)
                     .setStyle(TextInputStyle.Short);
