@@ -194,7 +194,7 @@ module.exports = {
         }
 
         const duyuruKanal = interaction.options.get("duyuru-kanali");
-        const logKanal = interaction.options.getChannel("log-kanali");
+        const logKanal = interaction.options.get("log-kanali")?.channel;
         if (!logKanal) {
           return interaction.reply({ content: "❌ | `log-kanali` parametresi eksik veya silinmiş.", flags: 1 << 6 });
         }
@@ -205,7 +205,7 @@ module.exports = {
           registeredRoleId: interaction.options.getRole("registered-role").id,
           staffRoleId: interaction.options.getRole("staff-role").id,
           tag: interaction.options.getString("tag"),
-          logChannelId: logKanal.id,
+          logChannelId: logKanal ? logKanal.id : null,
           announcementChannelId: duyuruKanal ? duyuruKanal.channel.id : null,
         };
 
@@ -232,3 +232,4 @@ module.exports = {
   ],
   initialize,
 };
+                    
