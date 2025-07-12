@@ -190,6 +190,7 @@ module.exports = {
           return interaction.reply({ content: "❌ | Bu komutu kullanmak için **Yönetici** yetkisine ihtiyacınız var.", ephemeral: true });
         }
 
+        const duyuruKanal = interaction.options.get("duyuru-kanali");
         const settings = {
           registrationChannelId: interaction.options.getChannel("registration-channel").id,
           unregisteredRoleId: interaction.options.getRole("unregistered-role").id,
@@ -197,7 +198,7 @@ module.exports = {
           staffRoleId: interaction.options.getRole("staff-role").id,
           tag: interaction.options.getString("tag"),
           logChannelId: interaction.options.getChannel("log-kanali").id,
-          announcementChannelId: interaction.options.get("duyuru-kanali")?.channel?.id || null,
+          announcementChannelId: duyuruKanal ? duyuruKanal.channel.id : null,
         };
 
         db.set(`registrationSystem_${interaction.guild.id}`, settings);
