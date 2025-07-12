@@ -197,7 +197,7 @@ module.exports = {
           staffRoleId: interaction.options.getRole("staff-role").id,
           tag: interaction.options.getString("tag"),
           logChannelId: interaction.options.getChannel("log-kanali").id,
-          announcementChannelId: interaction.options.getChannel("duyuru-kanali")?.id || null,
+          announcementChannelId: interaction.options.get("duyuru-kanali")?.channel?.id || null,
         };
 
         db.set(`registrationSystem_${interaction.guild.id}`, settings);
