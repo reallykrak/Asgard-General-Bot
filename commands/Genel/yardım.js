@@ -19,7 +19,7 @@ module.exports = {
     cooldown: 5,
 
     run: async (client, interaction) => {
-        // Komut klasörlerini ve toplam komut sayısını al
+        // Komut klasörlerini ve toplam komut sayısını all
         const commandFolders = fs.readdirSync("./commands");
         let totalCommands = 0;
         client.commands.forEach(() => totalCommands++);
